@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %>></title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/home.css" type="text/css">
+    </head>
+    <body>
+        <main>
+            <div id="main-container">
+                <h1>TODO App</h1>
+                <form action="" method="POST" id="create-task">
+                    <div id="desc-container">
+                        <label for="desc">DESCRIPTION</label><br>
+                        <input type="text" name="description" placeholder="What do you need to do?" id="desc" required>  
+                    </div>
+                    
+                    <div id="category-due-date-container">
+                        <div id="category-container">
+                            <label for="category">CATEGORY</label><br>
+                            <select name="category" id="category" required>
+                                <option value="" disabled selected>Choose a category</option>
+                                <option value="">Personal</option>
+                                <option value="">Work</option>
+                                <option value="">School</option>
+                                <option value="">Cleaning</option>
+                                <option value="">Others</option>
+                            </select>
+                        </div>
+                        <div id="due-date-container">
+                            <label for="due-date">DUE DATE</label><br>
+                            <input type="date" name="dueDate" id="due-date" required>
+                        </div>
+                        
+                    </div>
+                    
+                </form>
+                <div id="buttons-container">
+                    <button type="submit" form="create-task" id="add-task-btn"><i class="fas fa-plus"></i> &nbsp ADD TASK</button>
+                    <button type="submit" form="delete-tasks" id="delete-tasks-btn"><i class="fas fa-trash-alt"></i> DELETE TASKS</button>
+
+                </div>
+                
+                <form action="" method="GET" id="delete-tasks">
+                        <div id="task-container">
+                            <div class="task-details">
+                                <input type="checkbox" value="" class="check-box">
+                                <div>
+                                    <p class="task">Lets Make a TODO app</p>
+                                    <p class="date"><i class="far fa-calendar-alt"></i> &nbsp date</p>
+                                </div>
+                            </div>
+                            
+                            <div class="work">
+                                Work
+                            </div>
+                        </div>                 
+                </form>
+
+            </div>
+        </main>
+    </body>
+</html>
