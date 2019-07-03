@@ -1,0 +1,18 @@
+{
+  "name": "todo_app",
+  "version": "1.0.0",
+  "description": "A todo app where you can keep a track of all your activities and set reminders for the upcoming activities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Todo",
+    "App"
+  ],
+  "author": "Dhruv Jain",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
