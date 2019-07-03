@@ -4,6 +4,7 @@
   "description": "A todo app where you can keep a track of all your activities and set reminders for the upcoming activities.",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
