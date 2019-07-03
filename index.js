@@ -4,7 +4,6 @@ const sassMiddleware = require('node-sass-middleware');
 const port = 9000;
 var app = express();
 
-const homeController = require('./controllers/home_controller');
 
 // Tell express to use sass as a middleware to convert scss to css
 app.use(sassMiddleware({
@@ -30,7 +29,7 @@ app.set('layout extractScripts', true);
 app.use(expressLayouts);
 
 
-app.get('/home', homeController.home);
+app.use('/', require('./routes/index'));
 
 app.listen(port, function(err){
     if(err){
