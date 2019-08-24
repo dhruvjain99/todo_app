@@ -121,8 +121,20 @@ main {
   color: grey;
 }
 
-.work {
+.Work {
   padding: 10px 18px;
   color: white;
   background-color: #F2A700;
+}
+
+.Personal {
+  padding: 10px 18px;
+  color: white;
+  background-color: #ce240d;
+}
+
+.School {
+  padding: 10px 18px;
+  color: white;
+  background-color: #0f0283;
 }

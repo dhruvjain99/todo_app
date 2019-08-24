@@ -2,8 +2,16 @@ const Task = require('../models/task');
 
 
 module.exports.home = function(req, res){
-    return res.render('home',{
-        title: "Todo App"
+    Task.find({}, function(err, tasks){
+        if(err){
+            console.log("Error in fetching data from the database :: MongoDb");
+            return;
+        }
+        console.log("All the tasks are fetched from the database :: MongoDb");
+        return res.render('home',{
+            title: "Todo App",
+            tasks_list: tasks
+        });
     });
 }
 
