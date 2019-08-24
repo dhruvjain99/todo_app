@@ -7,4 +7,6 @@ router.get('/', homeController.home);
 
 router.post('/create-task', homeController.create);
 
+router.post('/delete-tasks', homeController.delete);
+
 module.exports = router;

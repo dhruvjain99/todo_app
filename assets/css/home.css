@@ -138,3 +138,15 @@ main {
   color: white;
   background-color: #0f0283;
 }
+
+.Cleaning {
+  padding: 10px 18px;
+  color: white;
+  background-color: #83023e;
+}
+
+.Others {
+  padding: 10px 18px;
+  color: white;
+  background-color: #2eaa1d;
+}

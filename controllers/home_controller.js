@@ -30,3 +30,19 @@ module.exports.create = function(req, res){
         return res.redirect('back');
     });
 }
+
+module.exports.delete = function(req,res){
+    console.log(req.body);
+    let id_list = new Array(0);
+    for(let prop in req.body){
+        id_list.push(req.body[prop]);
+    }
+    //console.log("**********" + id_list);
+    Task.deleteMany({_id: {$in: id_list}}, function(err){
+        if(err){
+            console.log("Error in deleting tasks from the database.");
+            return;
+        }
+        return res.redirect('back');
+    });
+}

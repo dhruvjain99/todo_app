@@ -34,11 +34,12 @@
 
                 </div>
                 
-                <form action="/delete-tasks" method="GET" id="delete-tasks">
-                    <% for(let task of locals.tasks_list){ %>
+                <form action="/delete-tasks" method="POST" id="delete-tasks">
+                    <% let i = 0; %>
+                    <% for(let task of locals.tasks_list){ i++;%>
                         <div id="task-container">
                             <div class="task-details">
-                                <input type="checkbox" value="<%= task._id %>" class="check-box" name="delete_tasks_list">
+                                <input type="checkbox" value="<%= task._id %>" class="check-box" name="task<%= i %>">
                                 <div>
                                     <p class="task"><%= task.description %></p>
                                     <p class="date"><i class="far fa-calendar-alt"></i> &nbsp <%= task.dueDate %></p>
