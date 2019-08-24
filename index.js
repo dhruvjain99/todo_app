@@ -30,6 +30,7 @@ app.set('layout extractScripts', true);
 // Setup the express-ejs-layouts 
 app.use(expressLayouts);
 
+app.use(express.urlencoded());
 
 app.use('/', require('./routes/index'));
 

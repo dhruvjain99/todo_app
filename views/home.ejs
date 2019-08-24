@@ -2,7 +2,7 @@
         <link rel="stylesheet" href="/css/home.css" type="text/css">
             <div id="main-container">
                 <h1>TODO App</h1>
-                <form action="" method="POST" id="create-task">
+                <form action="/create-task" method="POST" id="create-task">
                     <div id="desc-container">
                         <label for="desc">DESCRIPTION</label><br>
                         <input type="text" name="description" placeholder="What do you need to do?" id="desc" required>  
@@ -13,11 +13,11 @@
                             <label for="category">CATEGORY</label><br>
                             <select name="category" id="category" required>
                                 <option value="" disabled selected>Choose a category</option>
-                                <option value="">Personal</option>
-                                <option value="">Work</option>
-                                <option value="">School</option>
-                                <option value="">Cleaning</option>
-                                <option value="">Others</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Work">Work</option>
+                                <option value="School">School</option>
+                                <option value="Cleaning">Cleaning</option>
+                                <option value="Others">Others</option>
                             </select>
                         </div>
                         <div id="due-date-container">
