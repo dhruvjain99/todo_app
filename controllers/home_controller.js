@@ -1,6 +1,6 @@
 const Task = require('../models/task');
 
-
+//Controller to render the home page
 module.exports.home = function(req, res){
     Task.find({}, function(err, tasks){
         if(err){
@@ -15,7 +15,7 @@ module.exports.home = function(req, res){
     });
 }
 
-
+//Controller to create a new task
 module.exports.create = function(req, res){
     Task.create({
         description: req.body.description,
@@ -31,6 +31,8 @@ module.exports.create = function(req, res){
     });
 }
 
+
+//Controller to delete multiple tasks
 module.exports.delete = function(req,res){
     console.log(req.body);
     let id_list = new Array(0);

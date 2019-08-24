@@ -30,10 +30,13 @@ app.set('layout extractScripts', true);
 // Setup the express-ejs-layouts 
 app.use(expressLayouts);
 
+//Use urlencoded middleware to decode the data sent from the browser using POST method
 app.use(express.urlencoded());
 
+//Redirect all the requests to index.js router
 app.use('/', require('./routes/index'));
 
+//Listen requests on port 9000 
 app.listen(port, function(err){
     if(err){
         console.log("Error while starting the server :: ", err);
